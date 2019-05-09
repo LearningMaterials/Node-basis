@@ -5,8 +5,9 @@ const app = http.createServer((req, res) => {
     console.log('method: ' + req.method);
     console.log('rawHeaders: ' + req.rawHeaders);
     console.log('url: ' + req.url);
+    console.log('referer: ' + req.headers.referer);
     res.end("Hello World!");
 });
 
-app.listen(3000);
-console.log('Server running at http://127.0.0.1:3000/');
+app.listen(8080);
+console.log('Server running at http://127.0.0.1:8080/');
